@@ -1,6 +1,6 @@
 ---
 title: NEO4J
-layout: NEO4J
+layout: home
 ---
 
 # PART I. Descripció de la base de dades escollida
