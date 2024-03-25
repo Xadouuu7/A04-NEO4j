@@ -20,7 +20,7 @@ Un graf dirigit conegut consta d’un conjunt de vèrtexs i arestes on cada ares
 #### 1.2.2. Graf no dirigit
 Els grafs no dirigits són aquells que consten d’un conjunt de vèrtexs que estan connectats a un conjunt d’arestes de forma no direccional. Això significa que una aresta pot indistintament recorre des de qualsevol dels seus punts i en qualsevol direcció.
 
-![Exemple de graf no dirigit i graf no dirigit.](/imagenes/grafo1.png)
+![Exemple de graf no dirigit i graf no dirigit.](imagenes/grafo1.png)
 
 ### 1.3. Propietats principals dels grafs
 Com ja hem pogut observar els grafs són un món per si mateix. Contenen un conjunt de característiques i dinàmiques operatives.
@@ -46,7 +46,7 @@ Hi ha dos models comuns de bases de dades orientades a grafs: **grafs de propiet
 
 Els grafs de propietats s’utilitzen per modelar les relacions entre les dades i permeten fer anàlisi i consultes sobre les dades en funció d’aquestes relacions. Un graf de propietats té vèrtexs que poden contenir informació detallada sobre un tema, així com vores per resaltar la relació entre aquests vèrtexs. Els vèrtexs i les vores poden tenir atributs (anomenats propietats) als que estan associats.
 
-![En aquest exemple, es representa com un graf de propietats a un conjunt de companys i les relacions entre ells.](/imagenes/grafoRelaciones.png)
+![En aquest exemple, es representa com un graf de propietats a un conjunt de companys i les relacions entre ells.](imagenes/grafoRelaciones.png)
 
 #### 2.2.2. Grafs RDF
 
