@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Instalacion
 layout: home
 nav: index.md NEO4J
 
@@ -8,17 +8,19 @@ nav: index.md NEO4J
 ## Plataformas soportadas
 neo4j soporta arquitecturas de sistemas x86_64 y ARM en fisico, virtual o y en contenedores
 ## Requisitos de hardware
-|Hardware       |Description                                                                |
-|---------------|---------------------------------------------------------------------------|
-|CPU            |Intel x86-x64 Core i3 minimo, Core i7 recomendado. AMD x86-x64, Mac ARM.   |
-|Memoria Ram    |Minimo 2GB, 16GB o mas es lo recomendado                                   |
-|Almacenamiento |10GB SATA minimo, SSD con SATA Express or NVMe reconmendado                |
+| Hardware       | Description                                                              |
+|----------------|--------------------------------------------------------------------------|
+| CPU            | Intel x86-x64 Core i3 minimo, Core i7 recomendado. AMD x86-x64, Mac ARM. |
+| Memoria Ram    | Minimo 2GB, 16GB o mas es lo recomendado                                 |
+| Almacenamiento | 10GB SATA minimo, SSD con SATA Express or NVMe reconmendado              |
 
 Estos requisitos es para uso peronal o desarollo de software
 ## Requisitos de software
 Neo4j soporta varios sistemas operativos: 
-<!--No se como hacerlo -->
 
+
+
+Windows 10, 11
 # Instalacion Neo4j en debian
 Necesitaremos una serie de paquetes necesarios para permitir la instalacion de software de fuentes HTTPS
 
