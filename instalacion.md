@@ -1,7 +1,7 @@
 ---
 title: Instalacion
 layout: home
-nav: index.md NEO4J
+
 
 ---
 # MANUAL DEL USUARIO
@@ -17,7 +17,6 @@ Neo4j soporta varios sistemas operativos:
 
 ![](imagenes/instalacion/5.png)
 
-Windows 10, 11
 # Instalacion Neo4j en debian
 Necesitaremos una serie de paquetes necesarios para permitir la instalacion de software de fuentes HTTPS
 
@@ -52,11 +51,3 @@ sudo systemctl status neo4j.service
 
 
 
-
-
-
-
-
-
-
-https://debian.neo4j.com/
