@@ -15,9 +15,9 @@ La paraula “graf” prové del grec que pot ser traduït com a “imatge” o 
 
 Un graf és una composició d’un conjunt d’objectes anomenats nodes que es relacionen amb altres nodes a través d’un conjunt de connexions anomenades arestes. Els nodes són els que estan conformats per informació i les arestes que connecten els nodes són els que ens permeten entendre les relacions que existeixen entre els nodes.  Són extremadament útils en situacions complexes, és per això que és comú aconseguir la implementació d’anàlisi de grafs en estudis de ciències exactes, ciències socials i en aplicacions informàtiques (com és aquest cas).
 ### 1.2. Tipus de grafs
-#### 1.2.1. Graf dirigit
+#### **1.2.1. Graf dirigit**
 Un graf dirigit conegut consta d’un conjunt de vèrtexs i arestes on cada aresta s’associa de forma unidireccional a través d’una fletxa amb un altre. Les arestes, segons la seva sortida o entrada, reben el nom de “entrant” o “sortint”, la condició comú és que sempre tenen un destí dirigit cap a un node.
-#### 1.2.2. Graf no dirigit
+#### **1.2.2. Graf no dirigit**
 Els grafs no dirigits són aquells que consten d’un conjunt de vèrtexs que estan connectats a un conjunt d’arestes de forma no direccional. Això significa que una aresta pot indistintament recorre des de qualsevol dels seus punts i en qualsevol direcció.
 
 ![Exemple de graf no dirigit i graf no dirigit.](imagenes/grafo1.png)
@@ -42,13 +42,13 @@ L’analítica de grafs és altre terme d’ús comú i fa referència específi
 
 Hi ha dos models comuns de bases de dades orientades a grafs: **grafs de propietats** i **grafs RDF**. Els grafs de propietats es centren en l’anàlisi i les consultes, i els RDF es centren en la integració de dades. Ambdós tipus de grafs consisteixen en un conjunt de punts (vèrtexs) i de les connexions entre aquest dos punts (vores) però tenen diferències.
 
-#### 2.2.1. Grafs de propietats
+#### **2.2.1. Grafs de propietats**
 
 Els grafs de propietats s’utilitzen per modelar les relacions entre les dades i permeten fer anàlisi i consultes sobre les dades en funció d’aquestes relacions. Un graf de propietats té vèrtexs que poden contenir informació detallada sobre un tema, així com vores per resaltar la relació entre aquests vèrtexs. Els vèrtexs i les vores poden tenir atributs (anomenats propietats) als que estan associats.
 
 ![En aquest exemple, es representa com un graf de propietats a un conjunt de companys i les relacions entre ells.](imagenes/grafoRelaciones.png)
 
-#### 2.2.2. Grafs RDF
+#### **2.2.2. Grafs RDF**
 
 Els grafs **RDF** (Resource Description Framework) compleixen amb un conjunt d'estàndards W3C (Worlwide Web Consortium) dissenyats per representar declaracions; són la millor opció a l’hora de representar metadades complexes i dades principals. Solen utilitzar-se per dades vinculades, integració de dades i grafs de coneixement. 
 
@@ -80,6 +80,7 @@ S’han inventat molts algorismes de gràfics, des del famós algorisme de Dijks
 ### 2. NEO4J
 
 La primera versió de Neo4j va ser llançada el febrer de 2010 per Neo Technology a San Francisco. Es tracta d’un projecte en curs amb l’última versió estable 3.0 l’abril de 2016. La idea darrere de desenvolupar Neo4j com a programari de processament de grafs era emmagatzemar les relacions com a entitats de primera classe a diferència de les bases de dades agregades NoSQL.
+
 Neo4j es va crear per primera vegada com una base de dades Java incrustada; d’aquí ve el “4j” del nom. Des d’aleshores ha evolucionat més enllà d’això, de manera que l’aspecte de Java ja no és realment rellevant avui en dia, però és un cop d’ull a la seva història.
 
 Neo4j es va crear per abordar alguns problemes que tenien els fundadors en la construcció d’un sistema de gestió de continguts (CMS), específicament per a alguns dels drets i metadades al voltant de l’ús de les fotografies. Els va resultar molt difícil representar en una base de dades relacional a causa de totes les connexions i relacions diferents i la riquesa de les dades. Per això, Neo4j es va crear per primera vegada.
@@ -92,17 +93,17 @@ Aquests són alguns dels primers casos d’ús bàsics on Neo4j realment va come
 ### Casos d’utilització
 En cert sentit, moltes de les millors empreses d’Internet actuals es basen en tecnologies de grafs, per citar-ne algunes:
  
-- **Google**:PageRank és un algorisme de classificació de pàgines web a gran escala. 
+- **Google**: PageRank és un algorisme de classificació de pàgines web a gran escala. 
 
-- **Facebook**:La característica bàsica de Facebook és el seu gràfic social: tot es basa en “amics d’amics d’amics” i si algun cop has llegit sobre la Teoria dels Sis nivells de Separació, Facebook construeix a gran xarxa d’amics i perque dues persones es connectin mutuament normalment el salt que hi ha no és més que 5 o 6 amics entre medias **(mirar a ver como coño digo esto bien).**  
+- **Facebook**: La característica bàsica de Facebook és el seu gràfic social: tot es basa en “amics d’amics d’amics” i si algun cop has llegit sobre la Teoria dels Sis nivells de Separació, Facebook construeix a gran xarxa d’amics i perque dues persones es connectin mutuament normalment el salt que hi ha no és més que 5 o 6 amics entre medias **(mirar a ver como coño digo esto bien).**  
 
-- **Twitter**:Els grafs són l’eix vertebrador de Twitter a l’hora d’ensenyar-te els tuits que vols veure segons els “m’agrada” que has fet.
+- **Twitter**: Els grafs són l’eix vertebrador de Twitter a l’hora d’ensenyar-te els tuits que vols veure segons els “m’agrada” que has fet.
 
-- **LinkedIn**:Una de les característiques socials bàsiques que ofereix és recomanar un professional que estigui a 2 o 3 salts de distància de la persona, i això només és possible mitjançant un motor de gràfics.
+- **LinkedIn**: Una de les característiques socials bàsiques que ofereix és recomanar un professional que estigui a 2 o 3 salts de distància de la persona, i això només és possible mitjançant un motor de gràfics.
 
-- **Goldman Sachs**:Si recordeu l’última crisi financera mundial del 2007-2008 amb la caiguda de Lehman Brothers. El principal líder, Goldman Sachs, va retirar els acords amb Lehman Brothers i el motiu de la retirada va ser que Goldman utilitza un potent sistema Graph DB: SecDB, que va poder calcular i predir l’esclat imminent de la bombolla.
+- **Goldman Sachs**: Si recordeu l’última crisi financera mundial del 2007-2008 amb la caiguda de Lehman Brothers. El principal líder, Goldman Sachs, va retirar els acords amb Lehman Brothers i el motiu de la retirada va ser que Goldman utilitza un potent sistema Graph DB: SecDB, que va poder calcular i predir l’esclat imminent de la bombolla.
 
-- **PayPal, eBay… comerç electrònic**:La informàtica de grafs no és estranya per aquestes empreses d’Internet de la novaera impulsada per la tecnologia: la competència bàsica dels grafs és que ajuda arevelar correlacions o connectivitats que no són possibles o massa lentes amb lesrelacions relacionals habituals.
+- **PayPal, eBay… comerç electrònic**: La informàtica de grafs no és estranya per aquestes empreses d’Internet de la novaera impulsada per la tecnologia: la competència bàsica dels grafs és que ajuda arevelar correlacions o connectivitats que no són possibles o massa lentes amb lesrelacions relacionals habituals.
 
 ## Versions
 ## Comparacions
@@ -116,7 +117,7 @@ Les bases de dades orientades a grafs tenen diversos avantatges respecte a les b
 
 - **Processament del llenguatge natural**: Les bases de dades de grafs són molt adequades per a la ciència de dades i l’aprenentatge automàtic combinat amb aplicacions de processament del llenguatge natural (NLP) com ara chatbots, assistents virtuals i anàlisi de sentiments. Es poden utilitzar fàcilment per modelar relacions entre paraules i frases.
 
-- ,**Integració de dades**:Les bases de dades de grafs es poden utilitzar per combinar dades estructurades i no estructurades de diverses fonts. Això pot fer que extreure conclusions de diverses fonts de dades sigui més senzill.
+- ,**Integració de dades**: Les bases de dades de grafs es poden utilitzar per combinar dades estructurades i no estructurades de diverses fonts. Això pot fer que extreure conclusions de diverses fonts de dades sigui més senzill.
 
 #### 6.2. Desavantatges
 - **Estandardització**: Actualment les bases de dades de grafs no tenen un llenguatge de consulta estàndard, però hi ha diversos llenguatges de modelització de dades de grafs estàndards del sector, com ara RDF (Resource Description Framework), OWL (Web Ontology Language), així com Cipher. A més, hi ha diverses iniciatives en marxa per crear llenguatges de consulta estàndard per a bases de dades de grafs com ara GQL (Graph Query Language) i SPARQL (SPARQL Protocol i RDF Query Language). A causa d’això, canviar entre diferents bases de dades de grafs o integrar bases de dades de grafs amb altres tecnologies pot ser un repte a causa de la manca d’estandardització en les consultes. Cada proveïdor de bases de dades de grafs normalment té el seu propi llenguatge de consulta i sintaxi, cosa que dificulta la migració de dades o la integració amb altres sistemes.
