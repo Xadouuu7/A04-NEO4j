@@ -1,7 +1,7 @@
 ---
 title: Instalacion y configuracion
 layout: default
-parent: MANUAL DEL USUARIO
+parent: Manual del usuario
 nav_order: 3
 ---
 # MANUAL DEL USUARIO

@@ -1,6 +1,6 @@
 ---
 title: Consulta de datos
 layout: default
-parent: MANUAL DEL USUARIO
+parent: Manual del usuario
 nav_order: 6
 ---
