@@ -1,5 +1,5 @@
 ---
-title: INSTALACION
+title: Instalacion y configuracion
 layout: default
 parent: MANUAL DEL USUARIO
 nav_order: 3
@@ -11,7 +11,7 @@ neo4j soporta arquitecturas de sistemas x86_64 y ARM en fisico, virtual o y en c
 
 ![](../imagenes/instalacion/6.png)
 
-Estos requisitos es para uso peronal o desarollo de software
+Estos requisitos es para uso personal o desarollo de software
 ## Requisitos de software
 Neo4j soporta varios sistemas operativos: 
 
@@ -48,7 +48,7 @@ sudo systemctl status neo4j.service
 ```
 ![](../imagenes/instalacion/3.png)
 
-Finalmente tendremos que cambiar el archivo de configuracion de neo4j con nuestro editor de texto preferido para permitir la conexion a otros hosts
+Finalmente tendremos que cambiar el archivo de configuracion de neo4j con nuestro editor de texto preferido para permitir la conexion a otros hosts, si llegamos a cambiar el archivo tendremo que hacer un systemctl restart
 
 ```
 vim /etc/neo4j/neo4j.conf
