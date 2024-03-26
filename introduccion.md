@@ -1,7 +1,7 @@
 ---
 title: NEO4J
 layout: home
-nav: index.md instalacion.md
+nav: 1
 ---
 
 # PART I. Descripció de la base de dades escollida

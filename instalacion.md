@@ -1,8 +1,7 @@
 ---
-title: Instalacion
+title: INSTALACION
 layout: home
-
-
+nav: 2
 ---
 # MANUAL DEL USUARIO
 ## Plataformas soportadas
@@ -28,7 +27,7 @@ Ahora utiliza curl para descargar la clave GPG PUBLICA DE Neo4j para despues gua
 ```
 sudo curl -fsSL https://debian.neo4j.com/neotechnology.gpg.key | apt-key add -
 ```
-
+![](imagenes/instalacion/7.png)
 Agrega el repositorio  de Neo4j a la lista de fuentes de software esto nos permite buscar y descargar paquetes de Neo4j
 ```
 sudo add-apt-repository "deb https://debian.neo4j.com/ stable 4.1"
