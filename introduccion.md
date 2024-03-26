@@ -62,7 +62,6 @@ El model RDF aporta un mètode per publicar dades en un format estàndard i amb 
 ## Història
 
 ### 1. Historia bases de dades de grafs
-
 La base de dades de grafs s’ha considerat tradicionalment un subtipus de base de dades NoSQL (a diferència de la base de dades centrada en SQL, també coneguda com a base de dades relacional, que ha estat el tipus de base de dades dominant des de finals de la década de 1980 i encara és molt popular entre els entorns informàtics empresarials, grans o petits).
 
 El seu concepte bàsic es basa en la teoria de grafs, més coneguda pel problema dels set ponts de Königsberg que va publicar el matemàtic de renom mundial Leonhard Euler el 1735-1736. Per descomptat, les bases de dades de grafs no van començar a prendre les seves formes fins als últims 10 anys i gairebé 40 anys després de la invenció d’Internet, sense oblidar l’aparició de l’ordinador en sentit modern.
@@ -79,7 +78,6 @@ Contràriament, les bases de dades de grafs representen les dades com una xarxa 
 S’han inventat molts algorismes de gràfics, des del famós algorisme de Dijkstra (1956 - problema del camí més curt al graf) fins al PageRank que va inventar el cofundador de Google a finals dels anys noranta i a la modularitat de Louvain (detecció de comunitats en un gràfic).
 
 ### 2. NEO4J
-
 La primera versió de Neo4j va ser llançada el febrer de 2010 per Neo Technology a San Francisco. Es tracta d’un projecte en curs amb l’última versió estable 3.0 l’abril de 2016. La idea darrere de desenvolupar Neo4j com a programari de processament de grafs era emmagatzemar les relacions com a entitats de primera classe a diferència de les bases de dades agregades NoSQL.
 
 Neo4j es va crear per primera vegada com una base de dades Java incrustada; d’aquí ve el “4j” del nom. Des d’aleshores ha evolucionat més enllà d’això, de manera que l’aspecte de Java ja no és realment rellevant avui en dia, però és un cop d’ull a la seva història.
@@ -118,7 +116,7 @@ Les bases de dades orientades a grafs tenen diversos avantatges respecte a les b
 
 - **Processament del llenguatge natural**: Les bases de dades de grafs són molt adequades per a la ciència de dades i l’aprenentatge automàtic combinat amb aplicacions de processament del llenguatge natural (NLP) com ara chatbots, assistents virtuals i anàlisi de sentiments. Es poden utilitzar fàcilment per modelar relacions entre paraules i frases.
 
-- ,**Integració de dades**: Les bases de dades de grafs es poden utilitzar per combinar dades estructurades i no estructurades de diverses fonts. Això pot fer que extreure conclusions de diverses fonts de dades sigui més senzill.
+- **Integració de dades**: Les bases de dades de grafs es poden utilitzar per combinar dades estructurades i no estructurades de diverses fonts. Això pot fer que extreure conclusions de diverses fonts de dades sigui més senzill.
 
 #### 6.2. Desavantatges
 - **Estandardització**: Actualment les bases de dades de grafs no tenen un llenguatge de consulta estàndard, però hi ha diversos llenguatges de modelització de dades de grafs estàndards del sector, com ara RDF (Resource Description Framework), OWL (Web Ontology Language), així com Cipher. A més, hi ha diverses iniciatives en marxa per crear llenguatges de consulta estàndard per a bases de dades de grafs com ara GQL (Graph Query Language) i SPARQL (SPARQL Protocol i RDF Query Language). A causa d’això, canviar entre diferents bases de dades de grafs o integrar bases de dades de grafs amb altres tecnologies pot ser un repte a causa de la manca d’estandardització en les consultes. Cada proveïdor de bases de dades de grafs normalment té el seu propi llenguatge de consulta i sintaxi, cosa que dificulta la migració de dades o la integració amb altres sistemes.
