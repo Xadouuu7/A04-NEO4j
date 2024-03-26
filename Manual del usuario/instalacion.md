@@ -1,6 +1,6 @@
 ---
 title: INSTALACION
-layout: home
+layout: default
 parent: MANUAL DEL USUARIO
 nav_order: 1
 ---

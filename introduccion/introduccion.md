@@ -1,6 +1,6 @@
 ---
 title: NEO4J
-layout: home
+layout: default
 nav_order: 1
 ---
 
