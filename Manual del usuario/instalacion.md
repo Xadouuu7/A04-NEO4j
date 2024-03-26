@@ -1,20 +1,21 @@
 ---
 title: INSTALACION
 layout: home
-nav_order: 2
+parent: MANUAL DEL USUARIO
+nav_order: 1
 ---
 # MANUAL DEL USUARIO
 ## Plataformas soportadas
 neo4j soporta arquitecturas de sistemas x86_64 y ARM en fisico, virtual o y en contenedores
 ## Requisitos de hardware
 
-![](imagenes/instalacion/6.png)
+![](../imagenes/instalacion/6.png)
 
 Estos requisitos es para uso peronal o desarollo de software
 ## Requisitos de software
 Neo4j soporta varios sistemas operativos: 
 
-![](imagenes/instalacion/5.png)
+![](../imagenes/instalacion/5.png)
 
 # Instalacion Neo4j en debian
 Necesitaremos una serie de paquetes necesarios para permitir la instalacion de software de fuentes HTTPS
@@ -22,30 +23,30 @@ Necesitaremos una serie de paquetes necesarios para permitir la instalacion de s
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 ```
-![](imagenes/instalacion/1.png)
+![](../imagenes/instalacion/1.png)
 Ahora utiliza curl para descargar la clave GPG PUBLICA DE Neo4j para despues guardarla en el almacen de claves APT
 ```
 sudo curl -fsSL https://debian.neo4j.com/neotechnology.gpg.key | apt-key add -
 ```
-![](imagenes/instalacion/7.png)
+![](../imagenes/instalacion/7.png)
 Agrega el repositorio  de Neo4j a la lista de fuentes de software esto nos permite buscar y descargar paquetes de Neo4j
 ```
 sudo add-apt-repository "deb https://debian.neo4j.com/ stable 4.1"
 ```
-![](imagenes/instalacion/4.png)
+![](../imagenes/instalacion/4.png)
 
 Instala Neo4j con apt install
 ```
 sudo apt install neo4j
 ```
-![](imagenes/instalacion/2.png)
+![](../imagenes/instalacion/2.png)
 Inicializamos el Neo4j con systemctl
 ```
 sudo systemctl start neo4j.service
 sudo systemctl enable neo4j.service
 sudo systemctl status neo4j.service
 ```
-![](imagenes/instalacion/3.png)
+![](../imagenes/instalacion/3.png)
 
 
 
