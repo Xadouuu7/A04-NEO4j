@@ -2,7 +2,7 @@
 title: INSTALACION
 layout: default
 parent: MANUAL DEL USUARIO
-nav_order: 1
+nav_order: 3
 ---
 # MANUAL DEL USUARIO
 ## Plataformas soportadas
