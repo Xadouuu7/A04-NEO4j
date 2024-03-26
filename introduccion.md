@@ -1,7 +1,7 @@
 ---
 title: NEO4J
 layout: home
-nav: 1
+nav_order: 1
 ---
 
 # PART I. Descripció de la base de dades escollida

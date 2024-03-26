@@ -1,7 +1,7 @@
 ---
 title: INSTALACION
 layout: home
-nav: 2
+nav_order: 2
 ---
 # MANUAL DEL USUARIO
 ## Plataformas soportadas
