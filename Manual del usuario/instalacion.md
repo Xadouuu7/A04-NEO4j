@@ -48,6 +48,12 @@ sudo systemctl status neo4j.service
 ```
 ![](../imagenes/instalacion/3.png)
 
+Finalmente tendremos que cambiar el archivo de configuracion de neo4j con nuestro editor de texto preferido para permitir la conexion a otros hosts
+
+```
+vim /etc/neo4j/neo4j.conf
+```
+![](../imagenes/instalacion/8.png)
 
 
 
