@@ -1,10 +1,12 @@
 --- 
-title: conexion
+title: Conexion
 layout: default
 parent: Manual del usuario
 nav_order: 4
 ---
-
+- [Conexion a la base de datos](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/conexion.html#conexion-mediante-web)
+- [Conexion mediante web](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/conexion.html#conexion-mediante-programa-neo4j-desktop)
+- [Conexion mediante auraDB](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/conexion.html#conexion-mediante-auradb)
 # Conexion a la base de datos
 Para conectarte a Neo4j desde tu aplicación o herramienta favorita, necesitarás la dirección IP y el puerto en los que está ejecutándose el servidor de Neo4j. Para llevar a cabo esta tarea, es necesario haber realizado la modificación del archivo de configuración de Neo4j, lo cual ya se completó durante la etapa de instalación.
 [ArchivoConfiguracion](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/instalacion.html#archivo-de-configuracion){: .btn .btn-purple }
