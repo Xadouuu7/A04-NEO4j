@@ -6,7 +6,7 @@ nav_order: 5
 ---
 
 # CONSULTA DE DATOS
-En esta sección, exploraremos las sentencias básicas de Cypher, el lenguaje utilizado por Neo4j para consultar, modificar, insertar y eliminar nodos y relaciones en bases de datos de grafos. Aunque similar a SQL en algunos aspectos, Cypher presenta diferencias significativas que es importante comprender.
+En esta sección, exploraremos las sentencias básicas de Cypher, el lenguaje utilizado por Neo4j, para consultar en bases de datos de grafos. Aunque similar a SQL en algunos aspectos, Cypher presenta diferencias significativas que es importante comprender.
 
 ## SIMILITUDES Y DIFERENCIAS ENTRE SQL Y CYPHER
 ### Similitudes
