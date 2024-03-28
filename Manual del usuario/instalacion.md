@@ -49,10 +49,15 @@ sudo systemctl status neo4j.service
 ![](../imagenes/instalacion/3.png)
 
 #### ARCHIVO DE CONFIGURACION
-Finalmente tendremos que cambiar el archivo de configuracion de neo4j con nuestro editor de texto preferido para permitir la conexion a otros hosts, si llegamos a cambiar el archivo tendremo que hacer un systemctl restart
+Finalment, caldrà que modifiquem el fitxer de configuració de Neo4j amb el nostre editor de text preferit per permetre la connexió a altres hosts. Si fem canvis al fitxer de configuració, haurem de reiniciar el servei amb systemctl restart.
 
+La primera línia descomentada indica la interfície de xarxa predeterminada en què el servidor escoltarà les connexions. En posar 0.0.0.0, ens indica que escoltarà totes les connexions de totes les interfícies de xarxa.
+
+La segona línia indica la direcció que el servidor utilitzarà per anunciar-se a altres dispositius.
 ```
 vim /etc/neo4j/neo4j.conf
+server.default_listen_address=0.0.0.0
+server.default_advertised_address=192.168.1.86
 ```
 ![](../imagenes/instalacion/8.png)
 
