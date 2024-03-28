@@ -4,7 +4,7 @@ layout: default
 parent: Manual del usuario
 nav_order: 3
 ---
-# MANUAL DEL USUARIO
+# Instalacion y configuracion
 ## Plataformas soportadas
 neo4j soporta arquitecturas de sistemas x86_64 y ARM en fisico, virtual o y en contenedores
 ## Requisitos de hardware
@@ -48,6 +48,7 @@ sudo systemctl status neo4j.service
 ```
 ![](../imagenes/instalacion/3.png)
 
+#### ARCHIVO DE CONFIGURACION
 Finalmente tendremos que cambiar el archivo de configuracion de neo4j con nuestro editor de texto preferido para permitir la conexion a otros hosts, si llegamos a cambiar el archivo tendremo que hacer un systemctl restart
 
 ```
