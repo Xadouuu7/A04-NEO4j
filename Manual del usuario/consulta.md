@@ -15,7 +15,7 @@ SQL y Cypher comparten algunas similitudes, como el uso de cláusulas como ```WH
 ### Diferencias
 
 
-#### Orden de querys
+#### **Orden de querys**
 Una de las diferencias clave es el orden de las consultas. En Cypher, todas las consultas terminan con la cláusula ```RETURN```, que especifica lo que el usuario desea obtener como resultado, mientras que en SQL comienzas seleccionando lo que quieres ver con un ```SELECT```. Para ilustrar esto, consideremos las siguientes dos consultas que buscan jugadores con una altura mayor a 1.91, la primera en SQL y la segunda en Cypher:
 
 ```
@@ -29,7 +29,7 @@ WHERE player.height > 1.91
 RETURN player.name
 ```
 
-#### Querys mas breves
+#### **Querys mas breves**
 Las consultas en Cypher suelen ser más breves que sus equivalentes en SQL. Por ejemplo, considera las siguientes dos consultas que buscan los jugadores que forman parte del equipo 'LA Lakers':
 ```
 SELECT player.name
