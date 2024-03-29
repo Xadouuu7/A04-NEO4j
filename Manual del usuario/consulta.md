@@ -85,8 +85,12 @@ CREATE
 
 ### Ejemplos de consultas
 
-{: .note }
-n,r,m es el nombre de la variable
+{: .note-title }
+> Importatne
+>
+> n,r,m es el nombre de la variable
+
+
 
 
 obtener todos los nodos:
