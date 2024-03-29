@@ -80,15 +80,40 @@ CREATE
 ```
 
 ### Sintaxis Cypher
-| Clausula               | Explicacion                                                                      |
-|:-----------------------|:---------------------------------------------------------------------------------|
-| MATCH                  | Aquesta cláusula s’utilitza per trobar un patró específic en el graf.            |
-| RETURN                 | Aquesta especifica quina part del patró de graf trobat (MATCH) volem retornar.   |
-| LIMIT                  | Amb això el que podem fer es limitar el total de resultats que retornarà         |
-| WHERE                  | Podem filtrar resultats utilitzant aquesta clàusula                              |
-| ORDER BY               | Amb aquesta podrem ordenar els resultats que ens mostrarà el return              |
-| DISTINCT               | Aquesta clàusula ens ajudarà a treure els resultats repetits.                    |
-| -nodo[:relación]->nodo | Se utilitza per trobar relacions entre nodes, podem especificar la relacio       |
+![](../imagenes/consulta/tablaSintaxis.png)
+
 
 ### Ejemplos de consultas
 
+{: .note }
+n,r,m es el nombre de la variable
+
+
+obtener todos los nodos:
+```
+MATCH (N) RETURN N
+```
+
+Obtener todos los nodos y sus relaciones:
+```
+MATCH (n)-[r]->(m) RETURN n,r,m
+```
+
+Obtener solo los player:
+```
+MATCH (n:PLAYER) RETURN n
+```
+
+Obtener solos los nombres de los jugadores:
+```
+MATCH (n:PLAYER) RETURN n.name
+```
+
+Obtener solo x jugadores:
+```
+MATCH (n:PLAYER) RETURN n LIMIT 2
+```
+Obtener el player llamado 'LeBron James'
+```
+MATCH (n:PLAYER {name:'LeBron James'}) RETURN n
+```
