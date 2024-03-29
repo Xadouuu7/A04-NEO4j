@@ -76,21 +76,18 @@ CREATE
 (russell)-[:PLAYS_FOR {salary: 33000000}]-> (lakers),
 
 (lebron)-[:PLAYED_AGAINST {minutes: 38, points: 32, assists: 6, rebounds: 6, turnovers: 2}]-> (memphis),
-(russell)-[:PLAYED_AGAINST {minutes: 29, points: 16, assists: 12, rebounds: 11, turnovers: 16}]-> (memphis),
+(russell)-[:PLAYED_AGAINST {minutes: 29, points: 16, assists: 12, rebounds: 11, turnovers: 16}]-> (memphis)
 ```
 
 ### Sintaxis Cypher
 ![](../imagenes/consulta/tablaSintaxis.png)
 
 
-### Ejemplos de consultas
+#### Ejemplos de consultas
 
 {: .important }
 >
 >  n,r,m es el nombre de la variable
-
-
-
 
 
 obtener todos los nodos:
@@ -108,7 +105,7 @@ Obtener solo los player:
 MATCH (n:PLAYER) RETURN n
 ```
 
-Obtener solos los nombres de los jugadores:
+Obtener solos los nombres de los jugadores(Obtendras una tabla):
 ```
 MATCH (n:PLAYER) RETURN n.name
 ```
@@ -117,7 +114,63 @@ Obtener solo x jugadores:
 ```
 MATCH (n:PLAYER) RETURN n LIMIT 2
 ```
+
 Obtener el player llamado 'LeBron James'
 ```
 MATCH (n:PLAYER {name:'LeBron James'}) RETURN n
+```
+Obtener solo los jugadores que tienen mas de 29 años
+```
+MATCH (n:PLAYER) WHERE n.age > 29 RETURN n
+```
+
+Obtener solo los entrenadores en orden alfabetico por su nombre
+```
+MATCH (n:COACH)
+RETURN n
+ORDER BY n.name asc
+```
+
+Los entrenadores de los jugadores
+```
+MATCH (n:COACH)-[:COACHES]->(m:PLAYER) RETURN n,m
+```
+
+Ver los jugadores que cobran mas de 35000000 en un equipo
+```
+MATCH (player:PLAYER) - [contrato:PLAYS_FOR] -> (team:TEAM)
+WHERE contrato.salary >= 35000000
+RETURN player,team
+```
+
+### Funciones de agregacion
+
+![](../imagenes/consulta/tablaAgrupacion.png)
+
+Obtener el numero de jugadores(COUNT)
+```
+MATCH (player:PLAYER)
+RETURN COUNT(player) AS numero_de_jugadores;
+```
+Obtener todos los puntos de los partidos de un jugador(SUM)
+```
+MATCH (player:PLAYER {name: "LeBron James"})-[puntos:PLAYED_AGAINST]->(team:TEAM)
+RETURN player,SUM(puntos.points)
+
+```
+Obtener media de edad de los jugadores(AVG)
+```
+MATCH (player:PLAYER)
+RETURN AVG(player.age)
+
+```
+Obtener altura minima(MIN)
+```
+MATCH (player:PLAYER)
+RETURN MIN(player.height)
+```
+Obtener altura maxima(MAX)
+```
+MATCH (player:PLAYER)
+RETURN MAX(player.height)
 ```
