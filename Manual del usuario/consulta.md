@@ -85,10 +85,10 @@ CREATE
 
 ### Ejemplos de consultas
 
-{: .note-title }
-> Importatne
+{: .important }
 >
-> n,r,m es el nombre de la variable
+>  n,r,m es el nombre de la variable
+
 
 
 
