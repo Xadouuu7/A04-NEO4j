@@ -5,52 +5,17 @@ parent: Manual del usuario
 nav_order: 5
 ---
 
-# CONSULTA DE DATOS
-En esta sección, exploraremos las sentencias básicas de Cypher, el lenguaje utilizado por Neo4j, para consultar en bases de datos de grafos. Aunque similar a SQL en algunos aspectos, Cypher presenta diferencias significativas que es importante comprender.
+# 1. Consulta de Dades
+En aquesta secció, ens adentrarem en les sentències bàsiques de Cypher, el llenguatge utilitzat específicament per interrogar bases de dades de grafs a través de Neo4j. Encara que presenta similituds amb SQL en alguns aspectes, Cypher enhibeix diferències significatives que cal comprendre a fons.
 
-## SIMILITUDES Y DIFERENCIAS ENTRE SQL Y CYPHER
-### Similitudes
-SQL y Cypher comparten algunas similitudes, como el uso de cláusulas como ```WHERE``` y ```ORDER BY```. Sin embargo, también tienen diferencias fundamentales.
+Cypher és un llenguatge declaratiu que proporciona una manera elegant i eficient d'interactuar amb dades emmagatzemades en forma de grafs. A diferència de SQL, que s'enfoca principalment en les relacions entre taules i columnes, Cypher està dissenyat per navegar i consultar estructures de grafs, on els nodes representen entitats i les relacions entre ells són les arestes.
 
-### Diferencias
+Una de les característiques clau de Cypher és la seva facilitat d'ús i llegibilitat. Les seves sentències es basen en patrons que descriuen les relacions desitjades entre nodes i arestes, utilitzant una sintaxi semblant a un patró visual. Això fa que sigui relativament senzill expressar consultes complexes de manera concisa i comprensible.
 
-
-#### **Orden de querys**
-Una de las diferencias clave es el orden de las consultas. En Cypher, todas las consultas terminan con la cláusula ```RETURN```, que especifica lo que el usuario desea obtener como resultado, mientras que en SQL comienzas seleccionando lo que quieres ver con un ```SELECT```. Para ilustrar esto, consideremos las siguientes dos consultas que buscan jugadores con una altura mayor a 1.91, la primera en SQL y la segunda en Cypher:
-
-```
-SELECT name
-FROM player
-WHERE height > 1.91;
-```
-```
-MATCH (player:PLAYER)
-WHERE player.height > 1.91
-RETURN player.name
-```
-
-#### **Querys mas breves**
-Las consultas en Cypher suelen ser más breves que sus equivalentes en SQL. Por ejemplo, considera las siguientes dos consultas que buscan los jugadores que forman parte del equipo 'LA Lakers':
-```
-SELECT player.name
-FROM player pl
-INNER JOIN plays_for plfo ON plfo.playerid = pl.playerid
-INNER JOIN team te ON te.teamid = plfo.teamid
-WHERE te.name = 'LA Lakers'
-```
-En SQL, esta consulta implica acceder a varias tablas debido a la relación muchos a muchos.
-```
-MATCH(player:PLAYER)-[:PLAYS_FOR]->(team:TEAM {name: 'LA Lakers'})
-RETURN player.name
-```
-
-## Consultas simples
-
-### Creacion de un modelo de datos
-El siguiente grafos sera utilizado para los ejemplos de abajo:
+# 2. Consultes simples
+## 2.1. Creació d'un model de grafs
+Primerament, cal crear un model de grafs per poder fer les consultes. Això es pot fer amb la funció ```CREATE```. El següent model serà utilitzat pels exemples que hi ha a continuació: 
 ![](../imagenes/consulta/dataModel.png)
-
-Para poder recrearlo necesitaremos seguir la insercion en una base de datos Neo4j vacia:
 
 ```
 CREATE
@@ -67,7 +32,7 @@ CREATE
 (mavericks:TEAM{name:"Dallas Mavericks"}),
 
 (lebron)-[:TEAMMATES]-> (russell),
-(lebron)<-[:TEAMMATES]- (russell),
+(lebron)<-[:TEAMMATES]-(russell),
 
 (frank)-[:COACHES]->(lakers),
 (bryan)-[:COACHES]->(memphis),
@@ -78,98 +43,83 @@ CREATE
 (lebron)-[:PLAYED_AGAINST {minutes: 38, points: 32, assists: 6, rebounds: 6, turnovers: 2}]-> (memphis),
 (russell)-[:PLAYED_AGAINST {minutes: 29, points: 16, assists: 12, rebounds: 11, turnovers: 16}]-> (memphis)
 ```
-
-### Sintaxis Cypher
+## 2.2. Sintaxis de Cypher
 ![](../imagenes/consulta/tablaSintaxis.png)
-
-
-#### Ejemplos de consultas
-
+### 2.2.1. Exemples de consultes bàsiques
 {: .important }
 >
->  n,r,m es el nombre de la variable
+>  n,r,m és el nom de la variable. Si no es defineix cap valor a una variable en una clàusula   RETURN, aquesta serà NULL.
 
-
-obtener todos los nodos:
+- Per poder obtenir tots els nodes:
 ```
-MATCH (N) RETURN N
+MATCH (n) RETURN n
 ```
-
-Obtener todos los nodos y sus relaciones:
+- Per obtenir tots els nodes i les seves relacions:
 ```
 MATCH (n)-[r]->(m) RETURN n,r,m
 ```
-
-Obtener solo los player:
+- Obtenir només els jugadors:
 ```
 MATCH (n:PLAYER) RETURN n
 ```
-
-Obtener solos los nombres de los jugadores(Obtendras una tabla):
+- Per obtenir només els noms dels jugadors (obtindràs una taula, no un gràfic):
 ```
 MATCH (n:PLAYER) RETURN n.name
 ```
-
-Obtener solo x jugadores:
+- Per obtenir només X número de jugadors:
 ```
 MATCH (n:PLAYER) RETURN n LIMIT 2
 ```
-
-Obtener el player llamado 'LeBron James'
+- Per obtenir el jugador anomenat 'LeBron James': 
 ```
 MATCH (n:PLAYER {name:'LeBron James'}) RETURN n
 ```
-Obtener solo los jugadores que tienen mas de 29 años
+- Per obtenir només els jugadors que tenen més de 29 anys:
 ```
 MATCH (n:PLAYER) WHERE n.age > 29 RETURN n
 ```
-
-Obtener solo los entrenadores en orden alfabetico por su nombre
+- Per obtenir només els entrenadors en ordre alfabètic per el seu nom:
 ```
 MATCH (n:COACH)
 RETURN n
 ORDER BY n.name asc
 ```
-
-Los entrenadores de los jugadores
+- Per obtenir els entradors dels jugadors:
 ```
 MATCH (n:COACH)-[:COACHES]->(m:PLAYER) RETURN n,m
 ```
-
-Ver los jugadores que cobran mas de 35000000 en un equipo
+- Per veure els jugadors que cobren més de 35000000 en un equip: 
 ```
 MATCH (player:PLAYER) - [contrato:PLAYS_FOR] -> (team:TEAM)
 WHERE contrato.salary >= 35000000
 RETURN player,team
 ```
-
-### Funciones de agregacion
-
+# 3. Funcions d'agregació
 ![](../imagenes/consulta/tablaAgrupacion.png)
-
-Obtener el numero de jugadores(COUNT)
+## 3.1. Exemples de consultes amb funcions d'agregació:
+- Obtenir el número de jugadors (```COUNT```):
 ```
 MATCH (player:PLAYER)
 RETURN COUNT(player) AS numero_de_jugadores;
 ```
-Obtener todos los puntos de los partidos de un jugador(SUM)
+- Per obtenir tots els punts dels partits d'un jugador (```SUM```):
 ```
 MATCH (player:PLAYER {name: "LeBron James"})-[puntos:PLAYED_AGAINST]->(team:TEAM)
 RETURN player,SUM(puntos.points)
 
 ```
-Obtener media de edad de los jugadores(AVG)
+- Obtenir la mitjana d'edat dels jugadors (```AVG```):
 ```
 MATCH (player:PLAYER)
 RETURN AVG(player.age)
 
 ```
-Obtener altura minima(MIN)
+- Per obtenir l'altura mínima dels jugadors (```MIN```):
 ```
 MATCH (player:PLAYER)
 RETURN MIN(player.height)
 ```
-Obtener altura maxima(MAX)
+- Per obtenir l'altura màxima dels jugadors (```MAX```): 
 ```
 MATCH (player:PLAYER)
 RETURN MAX(player.height)

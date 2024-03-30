@@ -5,69 +5,64 @@ parent: Manual del usuario
 nav_order: 7
 ---
 
-# MANIPULACION DE DATOS
+# Manipulació de dades
 
 ## SET
-Para manipular los datos se usa la clausula ```SET```, se utiliza para actualizar etiquetas en nodos, relaciones y propiedades en los nodos
-The SET clause is used to update labels on nodes and properties on nodes and relationships.
+Per manipular les dades s'utilitza la clàusula ```SET```, s'utilitza per actualitzar etiquetes en nodes i propietats en nodes i relacions.
 
-Los ejemplos utilizan este grafo:
+Els exemples que donarem utilitzen aquest graf:
 ![](../imagenes/manipulacion/modeloFoto.png)
 ```
 CREATE (alex:PLAYER{name:"Alex Garcia", age: 28, number: 5, height: 1.99, weight: 95})-[:JUEGA_PARA {salario: 20000000}]->(warriors:TEAM{name: "Warriors"})
 ```
-### Establecer un propiedades
-Queremos cambiar la edad de Alex Garcia a 29 y la altura
+### Establir propietats
+- Per poder canviar l'edat de l'Alex García a 29 i l'altura:
 ```
 MATCH(n:PLAYER {name:"Alex Garcia"})
 SET n.age = 29, n.height = 1.99
 RETURN n.name, n.age
 ```
-Queremos cambiar el salario de Alex Garcia en Warriors 
+- Per poder canviar el salari que guanya l'Alex García jugant al seu equip:
 ```
 MATCH(n:PLAYER {name:"Alex Garcia"}) -[r:JUEGA_PARA]-> (m:TEAM {name: "Warriors"})
 SET r.salario = 1273189031
 RETURN n.name, r.salario, m.name
 ```
-### Actualizar una propiedades
-Queremos el tipo de variable a edad pase a String:
+### Actualitzar una propietat
+- Si volem que el tipus de variable d'edat sigui string en lloc d'enter:
 ```
 MATCH(n:PLAYER {name:"Alex Garcia"})
 SET n.age = ToString(n.age)
 RETURN n.name, n.age
 ```
-
-## DELETE
-Para eliminar un solo nodo
+## Eliminar
+- Per eliminar un node només:
 ```
 MATCH(n:PLAYER {name:"Alex Garcia"})
 DELETE n
 ```
-Eliminar solo las relaciones
+- Per eliminar només les relacions:
 ```
-
 MATCH(n:PLAYER {name:"Alex Garcia"}) -[r:JUEGA_PARA]-> (m:TEAM {name: "Warriors"})
 DELETE r
 ```
-
-Eliminar un nodo y todas sus relaciones
+- Per eliminar un node i totes les seves relacions:
 ```
 MATCH(n:PLAYER {name:"Alex Garcia"})
 DETACH DELETE n
 ```
-
-Eliminar todos los nodos y las relaciones
+- Per eliminar tots els nodes i les relacions:
 ```
 MATCH (n) DETACH DELETE n
 ```
 
-## REMOVE
-La clausula ```REMOVE``` se utiliza para remover propiedades de los nodos y las relaciones
+## Remove
+La clàusula ```REMOVE``` s'utilitza per treure propietats als nodes i a les relacions.
 
-### Eliminar una propiedad
-Neo4j no se permite almacenar '''null''' en propiedades, si no existe ningun valor la propiedad no estara presente. Por lo tanto una clausula ```REMOVE``` se utiliza para eliminar un valor una propiedad
+### Eliminar una propietat
+Neo4j no permet emmagatzemar ```null``` en propietats, si no existeix cap valor, la propietat no estarà present. Per tant, una clàusula ```REMOVE``` s'utilitza per eliminar un valor d'una propietat.
 
-Se puede eliminar uno o varias etiquetas a la vez
+Es pot eliminar un o varies etiquetes a la vegada:
 ```
 MATCH(n:PLAYER {name:"Alex Garcia"})
 REMOVE n.age, n.height
