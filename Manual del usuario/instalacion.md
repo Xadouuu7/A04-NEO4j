@@ -40,7 +40,7 @@ Instala Neo4j con apt install
 sudo apt install neo4j
 ```
 ![](../imagenes/instalacion/2.png)
-Inicializamos el Neo4j con systemctl
+Inicializamos el Neo4j con systemctl ```systemctl [start|enable|status] serviceName```
 ```
 sudo systemctl start neo4j.service
 sudo systemctl enable neo4j.service
