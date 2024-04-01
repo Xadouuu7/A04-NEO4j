@@ -6,7 +6,7 @@ nav_order: 8
 ---
 
 # SEGURIDAD
-## Puertos predeterminados
+## Ports predeterminats
 Modificar els ports per defecte és una mesura de seguretat útil per mitigar els atacs dirigits als ports coneguts. Per exemple, a Neo4j, que per defecte escolta en dos ports, el 7474 per a HTTP i el 7687 per a Bolt, pots canviar-los entrant al fitxer de configuració /etc/neo4j/neo4j.conf i buscant les seccions de configuració de ports. Simplement descomenta la línia corresponent i canvia el port segons les teves necessitats.
 
 ![](../imagenes/seguridad/Cambiar%20puertos.png)
