@@ -71,5 +71,5 @@ A Neo4j, les dades habitualment es troben a la ruta /var/lib/neo4j/data/database
 - Les relacions: ```neostore.relationshipstore.db``` s'emmagatzemen les relacions que hem creat i definit al graf.
 - Propietats clau/valor: ```neostore.propertystore.db``` emmagatzema les propietats clau/valor tant per a nodes com per a relacions.
 
-Aquests són només alguns dels arxius que podem trobar a la carpeta i que crec que són els més importants
+Aquests són només alguns dels arxius que podem trobar a la carpeta,  que nosaltres creiem que són els més importants
 ![](../imagenes/instalacion/9.png)
