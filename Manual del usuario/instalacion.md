@@ -1,7 +1,7 @@
 ---
 title: Instal·lació i configuració
 layout: default
-parent: Manual del usuario
+parent: Manual de l'usuari
 nav_order: 3
 ---
 # Instal·lació i configuració

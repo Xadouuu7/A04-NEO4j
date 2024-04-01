@@ -1,7 +1,7 @@
 --- 
 title: Connexió
 layout: default
-parent: Manual del usuario
+parent: Manual de l'usuari
 nav_order: 4
 ---
 
