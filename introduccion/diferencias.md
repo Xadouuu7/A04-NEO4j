@@ -1,7 +1,6 @@
 ---
 title: Semblances i diferències entre SQL i Cypher
 layout: default
-parent: Manual de l'usuari
 nav_order: 2
 ---
 # Semblances i diferències entre SQL i Cypher
