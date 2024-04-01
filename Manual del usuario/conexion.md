@@ -43,3 +43,8 @@ I ja estarem connectats a la nostra base de dades remota.
 ![](../imagenes/conexion/bieeen.png)
 
 ## Conexion mediante auraDB
+### Explicacio
+Si volem utilitzar Neo4j a la núvol, podem optar per una solució com AuraDB. Aquesta plataforma ens ofereix la flexibilitat d'allotjar la nostra base de dades Neo4j en un entorn cloud gestionat. El que és interessant és que compta amb un pla gratuït que ens permet provar els seus serveis sense cap cost.
+### Tutorial
+Per connectar-nos a una instància, simplement caldrà accedir a aquest [link](https://workspace-preview.neo4j.io/connection/connect) i simplement inserir la URL de la nostra connexió amb las credencials del nostre usuari.
+![](../imagenes/conexion/conexionAuraDB.png)

@@ -52,7 +52,6 @@ dbms.ssl.policy.https.enabled=true
 dbms.ssl.policy.https.base_directory=certificates/https
 #dbms.ssl.policy.https.private_key=private.key # Opcional si el fitxer té el mateix nom.
 #dbms.ssl.policy.https.public_certificate=public.crt # Opcional si el fitxer té el mateix nom.
-
 ```
 Finalment, un altre pas per reiniciar el servei i guardar els canvis:
 ```
