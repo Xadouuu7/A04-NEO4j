@@ -65,7 +65,7 @@ server.default_advertised_address=192.168.1.86
 
 #### arxiu de dades de Neo4j
 
-A Neo4j, les dades habitualment es troben a la ruta /var/lib/neo4j/data/databases, tot i que això pot variar en funció de la configuració específica del sistema. Dins d'aquesta carpeta, trobarem diverses subcarpetes amb el nom de les nostres bases de dades. A l'interior de cada una d'aquestes subcarpetes hi ha diversos arxius i altres subcarpetes que contenen la informació rellevant per a cada base de dades. Entre aquests arxius i carpetes, destaquen els següents:
+A Neo4j, les dades habitualment es troben a la ruta /var/lib/neo4j/data/databases, tot i que això pot variar en funció de la configuració específica del sistema. Dins d'aquesta carpeta, trobarem diverses subcarpetes amb el nom de les nostres bases de dades. A l'interior de cadascuna d'aquestes subcarpetes hi ha diversos arxius i altres subcarpetes que contenen la informació rellevant per a cada base de dades. Entre aquests arxius i carpetes, destaquen els següents:
 
 - Els nodes: ```neostore.nodestore.db``` conté les dades relacionades amb els nodes del graf.
 - Les relacions: ```neostore.relationshipstore.db``` s'emmagatzemen les relacions que hem creat i definit al graf.
