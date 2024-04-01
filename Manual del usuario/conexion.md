@@ -25,8 +25,21 @@ Un cop les credencials han estat verificades amb èxit, tindrem accés per treba
 ![](../imagenes/conexion/credencialesExitosas.png)
 
 ## Conexió mitjançant Neo4j Desktop
+### Explicacio
 [Neo4j Desktop](https://neo4j.com/download/) es un programa que facilita la gestión y el desarrollo de proyectos basados en Neo4j. Proporciona una interfaz gráfica que permite crear y administrar múltiples bases de datos Neo4j. Además que es esto lo que nos interesa, nos permite conectarnos de manera remota para trabajar con las bases de datos desde cualquier ubicación.
 
 És una aplicació que simplifica la gestió i el desenvolupament de projectes basats en Neo4j. Proporciona una interfície gràfica que facilita la creació i administració de diverses bases de dades Neo4j. A més, permet la connexió remota per treballar amb les bases de dades des de qualsevol ubicació.
+### Tutorial
+Una vegada tinguis el programa descarregat, simplement caldrà anar a la carpeta de projectes i afegir una connexió remota:
+![](../imagenes/conexion/boton1Neo4jDesk.png)
+
+Ara, hem d'afegir el nom del projecte i la URL de la base de dades.
+![](../imagenes/conexion/conexionBD.png)
+
+Caldrà afegir les credencials de l'usuari també.
+![](../imagenes/conexion/usuarioContraseña.png)
+
+I ja estarem connectats a la nostra base de dades remota.
+![](../imagenes/conexion/bieeen.png)
 
 ## Conexion mediante auraDB
