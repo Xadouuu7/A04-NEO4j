@@ -39,10 +39,12 @@ Redes y grafos. Las comunicaciones y la logística – Marzo, mes de las matemá
 
 - Guerrero IC. Análisis, diseño y despliegue de una base de datos orientada a grafos para la investigación de derivaciones de responsabilidades. Trabajo Final de Grado. Gener 2019. [link](https://academica-e.unavarra.es/xmlui/bitstream/2454/33724/2/TFG%20-%20Ivan%20Carabantes.pdf).
 
-- De Jong N. 15 Best Graph Visualization Tools for Your Neo4j Graph Database. Graph Database & Analytics. [link](https://neo4j.com/developer-blog/15-tools-for-visualizing-your-neo4j-graph-database/). Publicat 21 de juny de 2023.
+- De Jong N. 15 Best Graph Visualization Tools for Your Neo4j Graph Database. Graph Database & Analytics. [link](https://neo4j.com/developer-blog/15-tools-for-visualizing-your-neo4j-graph-database/). Publicat 21 de juny de 2023.s
 
 - About Neo4J Browser - Neo4J Browser. Neo4j Graph Data Platform. [link](https://neo4j.com/docs/browser-manual/current/about-browser/).
 
 - Neo4J Debian Packages. [link](https://debian.neo4j.com/).
 
 - System requirements - Operations Manual. Neo4j Graph Data Platform. [link](https://neo4j.com/docs/operations-manual/current/installation/requirements/).
+
+- Introduction Cypher Manual. Neo4j Graph Data Platform. [link](https://neo4j.com/docs/cypher-manual/current/introduction/)
