@@ -4,7 +4,8 @@ layout: default
 nav_order: 1
 ---
 
-# PART I. Descripció de la base de dades escollida
+
+![](../imagenes/Neo4j.png)
 ## Introducció
 Neo4j és un software lliure de Base de Dades orientat a grafs implementat en Java. És un magatzem de grafs d’alt rendiment. Descrita pels seus desenvolupadors com una base de dades transaccional compatible amb ACID amb emmagatzematge i processament natiu de grafs. Neo4j està implementat en Java i es accesible des de software escrit en diferents llenguatges utilitzant el llenguatge de consulta Cypher (és el llenguatge declaratiu, inspirat en SQL, que permet consultar, crear, insertar, modificar i eliminar dades en Neo4j).
 
