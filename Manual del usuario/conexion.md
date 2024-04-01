@@ -10,7 +10,7 @@ Per connectar-te a Neo4j des de la teva aplicació o eina preferida necessitarà
 
 ## MENU
 - [Connexió mitjançant web](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/conexion.html#conexion-mediante-web)
-- [Connexió mitjançant Neo4j Desktop](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/conexion.html#conexion-mediante-programa-neo4j-desktop)
+- [Connexió mitjançant Neo4j Desktop](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/conexion.html#conexi%C3%B3-mitjan%C3%A7ant-neo4j-desktop)
 - [Connexió mitjançant AuraDB](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/conexion.html#conexion-mediante-auradb)
 
 ## Connexió mitjançant web
