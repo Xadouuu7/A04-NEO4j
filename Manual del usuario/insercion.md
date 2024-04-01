@@ -1,5 +1,5 @@
 ---
-title: Insercion de datos
+title: Insercio de dades
 layout: default
 parent: Manual del usuario
 nav_order: 6

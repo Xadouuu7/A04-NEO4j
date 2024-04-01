@@ -1,5 +1,5 @@
 ---
-title: Seguridad
+title: Seguretat
 layout: default
 parent: Manual del usuario
 nav_order: 8

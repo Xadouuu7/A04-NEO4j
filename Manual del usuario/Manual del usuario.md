@@ -1,5 +1,5 @@
 ---
-title: Manual del usuario
+title: Manual de l'usuari
 layout: default
 nav_order: 2
 has_children: true
