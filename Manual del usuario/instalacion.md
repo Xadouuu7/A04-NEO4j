@@ -42,7 +42,7 @@ sudo apt install neo4j
 ```
 ![](../imagenes/instalacion/2.png)
 
-Iniciem el servei de Neo4j amb ```systemctl [start|enable|status] serviceName```:
+Iniciem el servei de Neo4j amb ```systemctl [start|enable|status|] serviceName```:
 ```
 sudo systemctl start neo4j.service
 sudo systemctl enable neo4j.service
@@ -50,7 +50,7 @@ sudo systemctl status neo4j.service
 ```
 ![](../imagenes/instalacion/3.png)
 
-#### ARXIU DE CONFIGURACIÓ
+#### arxiu de configuració
 Finalment, caldrà que modifiquem el fitxer de configuració de Neo4j amb el nostre editor de text preferit per permetre la connexió a altres hosts. Si fem canvis al fitxer de configuració, haurem de reiniciar el servei amb systemctl restart.
 
 La primera línia descomentada indica la interfície de xarxa predeterminada en què el servidor escoltarà les connexions. En posar 0.0.0.0, ens indica que escoltarà totes les connexions de totes les interfícies de xarxa.
@@ -63,5 +63,13 @@ server.default_advertised_address=192.168.1.86
 ```
 ![](../imagenes/instalacion/8.png)
 
+#### arxiu de dades de Neo4j
 
+A Neo4j, les dades habitualment es troben a la ruta /var/lib/neo4j/data/databases, tot i que això pot variar en funció de la configuració específica del sistema. Dins d'aquesta carpeta, trobarem diverses subcarpetes amb el nom de les nostres bases de dades. A l'interior de cada una d'aquestes subcarpetes hi ha diversos arxius i altres subcarpetes que contenen la informació rellevant per a cada base de dades. Entre aquests arxius i carpetes, destaquen els següents:
 
+- Els nodes: ```neostore.nodestore.db``` conté les dades relacionades amb els nodes del graf.
+- Les relacions: ```neostore.relationshipstore.db``` s'emmagatzemen les relacions que hem creat i definit al graf.
+- Propietats clau/valor: ```neostore.propertystore.db``` emmagatzema les propietats clau/valor tant per a nodes com per a relacions.
+
+Aquests són només alguns dels arxius que podem trobar a la carpeta i que crec que són els més importants
+![](../imagenes/instalacion/9.png)
