@@ -2,7 +2,7 @@
 title: Insercio de dades
 layout: default
 parent: Manual de l'usuari
-nav_order: 6
+nav_order: 7
 ---
 
 # INSERCIÓ DE DADES

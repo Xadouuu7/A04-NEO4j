@@ -2,7 +2,7 @@
 title: Seguretat
 layout: default
 parent: Manual de l'usuari
-nav_order: 8
+nav_order: 9
 ---
 
 # SEGURETAT
