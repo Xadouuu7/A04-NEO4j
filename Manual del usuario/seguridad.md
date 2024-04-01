@@ -22,7 +22,7 @@ Aquesta ordre generà una clau privada RSA i la desa com a 'private.key'.
 ### 2. Generar un certificado autofirmado
 Amb la següent ordre pots generar un certificat autofirmat utilitzant la clau privada acabada de crear:
 ```
-openssl req -new -x509 -key sslNeo4j.key -out sslNeo4j.crt -days 365
+openssl req -new -x509 -key sslNeo4j.key -out public.crt -days 365
 ```
 Aquesta ordre sol·licitarà informació per al certificat, com ara el país, l'adreça de correu electrònic, entre altres, però no cal proporcionar aquesta informació si no ho desitges.
 ![](../imagenes/seguridad/clavePublica.png)
@@ -30,7 +30,8 @@ Aquesta ordre sol·licitarà informació per al certificat, com ara el país, l'
 
 Ara haurem de tornar a l'arxiu de configuració ```/etc/neo4j/neo4j.conf``` i modificar les següents línies:
 #### BOLT
-Caldrà crear un directori a ```/var/lib/neo4j/certificates``` anomenat ```bolt```:
+Caldrà crear un directori a ```/var/lib/neo4j/certificates``` anomenat ```bolt```i moure els fitxers. Necessitarem modificar les següents línies. Recomano utilitzar la funció de cerca per trobar-les fàcilment:
+
 ```
 dbms.connector.bolt.enabled=true
 dbms.connector.bolt.tls_level=REQUIRED
@@ -42,7 +43,7 @@ dbms.ssl.policy.bolt.base_directory=certificates/bolt
 ```
 
 #### HTTPS
-Caldrà crear un directori a ```/var/lib/neo4j/certificates``` anomenat ```bolt```:
+Caldrà crear un directori a ```/var/lib/neo4j/certificates``` anomenat ```bolt``` i moure els fitxers. Necessitarem modificar les següents línies. Recomano utilitzar la funció de cerca per trobar-les fàcilment:
 ```
 dbms.connector.https.enabled=true
 
