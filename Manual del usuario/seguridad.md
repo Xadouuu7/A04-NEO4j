@@ -39,8 +39,8 @@ dbms.connector.bolt.tls_level=REQUIRED
 
 dbms.ssl.policy.bolt.enabled=true
 dbms.ssl.policy.bolt.base_directory=certificates/bolt
-#dbms.ssl.policy.bolt.private_key=private.key 	# Opcional si el archivo se llama igual
-#dbms.ssl.policy.bolt.public_certificate=public.crt 	# Opcional si el archivo se llama igual
+#dbms.ssl.policy.bolt.private_key=private.key 	# Opcional si el fitxer té el mateix nom.
+#dbms.ssl.policy.bolt.public_certificate=public.crt 	# Opcional si el fitxer té el mateix nom.
 ```
 
 #### HTTPS
@@ -50,8 +50,9 @@ dbms.connector.https.enabled=true
 
 dbms.ssl.policy.https.enabled=true
 dbms.ssl.policy.https.base_directory=certificates/https
-#dbms.ssl.policy.https.private_key=private.key #Opcional si el archivo se llama igual
-#dbms.ssl.policy.https.public_certificate=public.crt #Opcional si el archivo se llama igual
+#dbms.ssl.policy.https.private_key=private.key # Opcional si el fitxer té el mateix nom.
+#dbms.ssl.policy.https.public_certificate=public.crt # Opcional si el fitxer té el mateix nom.
+
 ```
 Finalment, un altre pas per reiniciar el servei i guardar els canvis:
 ```
