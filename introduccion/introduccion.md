@@ -4,7 +4,7 @@ layout: default
 nav_order: 1
 ---
 
-# PART I. Descripció de la base de dades escollida
+![](../imagenes/Neo4j.png)
 # Introducció
 Neo4j és una base de dades orientada a gràfs de codi obert implementada en Java, reconeguda pel seu alt rendiment. Els seus desenvolupadors la descriuen com un magatzem de gràfs transaccional compatible amb ACID amb emmagatzematge i processament de gràfs natius. Implementat en Java, Neo4j és accessible des de programari escrit en diversos llenguatges utilitzant el llenguatge de consulta Cypher. Aquest llenguatge declaratiu, inspirat en SQL, permet consultar, crear, inserir, modificar i eliminar dades en Neo4j.
 
