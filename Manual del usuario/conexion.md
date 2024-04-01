@@ -5,7 +5,7 @@ parent: Manual de l'usuari
 nav_order: 4
 ---
 
-# Connexió a la Base de Dades
+# CONNEXIÓ
 Per connectar-te a Neo4j des de la teva aplicació o eina preferida necessitaràs la direcció IP i el port en els que està executant-se el servidor de Neo4j. Per dur a terme aquesta tasca, és necessari haber realitzat la modificació de l'archiu de configuració de Neo4j, el qual ja es va completar durant l'etapa d'instalació. [Modificar arxiu](https://xadouuu7.github.io/A04-NEO4j/Manual%20del%20usuario/instalacion.html#archivo-de-configuracion)
 
 ## MENU

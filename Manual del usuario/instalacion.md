@@ -4,7 +4,7 @@ layout: default
 parent: Manual de l'usuari
 nav_order: 3
 ---
-# Instal·lació i configuració
+# INSTAL·LACIÓ I CONFIGURACIÓ
 ## Plataformes suportades
 Neo4j suporta arquitectures de sistemes x86_64 i ARM en físic, virtual i/o en contenidors.
 

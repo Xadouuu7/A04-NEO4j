@@ -5,8 +5,7 @@ parent: Manual de l'usuari
 nav_order: 7
 ---
 
-# Manipulació de dades
-
+# MANIPULACIÓ DE DADES
 ## SET
 Per manipular les dades s'utilitza la clàusula ```SET```, s'utilitza per actualitzar etiquetes en nodes i propietats en nodes i relacions.
 

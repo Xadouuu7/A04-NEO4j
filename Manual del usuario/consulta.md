@@ -5,15 +5,16 @@ parent: Manual de l'usuari
 nav_order: 5
 ---
 
-# 1. Consulta de Dades
+# CONSULTA DE DADES
+## 1. Consulta de Dades
 En aquesta secció, ens adentrarem en les sentències bàsiques de Cypher, el llenguatge utilitzat específicament per interrogar bases de dades de grafs a través de Neo4j. Encara que presenta similituds amb SQL en alguns aspectes, Cypher enhibeix diferències significatives que cal comprendre a fons.
 
 Cypher és un llenguatge declaratiu que proporciona una manera elegant i eficient d'interactuar amb dades emmagatzemades en forma de grafs. A diferència de SQL, que s'enfoca principalment en les relacions entre taules i columnes, Cypher està dissenyat per navegar i consultar estructures de grafs, on els nodes representen entitats i les relacions entre ells són les arestes.
 
 Una de les característiques clau de Cypher és la seva facilitat d'ús i llegibilitat. Les seves sentències es basen en patrons que descriuen les relacions desitjades entre nodes i arestes, utilitzant una sintaxi semblant a un patró visual. Això fa que sigui relativament senzill expressar consultes complexes de manera concisa i comprensible.
 
-# 2. Consultes simples
-## 2.1. Creació d'un model de grafs
+## 2. Consultes simples
+### 2.1. Creació d'un model de grafs
 Primerament, cal crear un model de grafs per poder fer les consultes. Això es pot fer amb la funció ```CREATE```. El següent model serà utilitzat pels exemples que hi ha a continuació: 
 ![](../imagenes/consulta/dataModel.png)
 
@@ -43,9 +44,9 @@ CREATE
 (lebron)-[:PLAYED_AGAINST {minutes: 38, points: 32, assists: 6, rebounds: 6, turnovers: 2}]-> (memphis),
 (russell)-[:PLAYED_AGAINST {minutes: 29, points: 16, assists: 12, rebounds: 11, turnovers: 16}]-> (memphis)
 ```
-## 2.2. Sintaxis de Cypher
+### 2.2. Sintaxis de Cypher
 ![](../imagenes/consulta/tablaSintaxis.png)
-### 2.2.1. Exemples de consultes bàsiques
+#### 2.2.1. Exemples de consultes bàsiques
 {: .important }
 >
 >  n,r,m és el nom de la variable. Si no es defineix cap valor a una variable en una clàusula   RETURN, aquesta serà NULL.
@@ -94,9 +95,9 @@ MATCH (player:PLAYER) - [contrato:PLAYS_FOR] -> (team:TEAM)
 WHERE contrato.salary >= 35000000
 RETURN player,team
 ```
-# 3. Funcions d'agregació
+## 3. Funcions d'agregació
 ![](../imagenes/consulta/tablaAgrupacion.png)
-## 3.1. Exemples de consultes amb funcions d'agregació:
+### 3.1. Exemples de consultes amb funcions d'agregació:
 - Obtenir el número de jugadors (```COUNT```):
 ```
 MATCH (player:PLAYER)
