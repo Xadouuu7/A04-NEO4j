@@ -16,13 +16,13 @@ nav_order: 10
 
 - Equipo editorial de IONOS. (2024, 7 de març). Graph database. IONOS Digital Guide. [link](https://www.ionos.es/digitalguide/hosting/cuestiones-tecnicas/graph-database/).
 
-- Canadas R. Base de datos orientada a grafos o graph database | Qué es. abdatum. juliol de 2022. [link](https://abdatum.com/informatica/base-datos-orientada-grafos).
+- Canadas R. Base de datos orientada a grafos o graph database Qué es. abdatum. juliol de 2022. [link](https://abdatum.com/informatica/base-datos-orientada-grafos).
 
 - Introducción a Amazon Neptune. Amazon Web Services, Inc. [link](https://aws.amazon.com/es/nosql/graph/).
 
 - Conecta Software. Base de datos orientada a grafos - Conecta Magazine. Conecta Magazine. febrer de 2024. [link](https://www.conectasoftware.com/magazine/base-de-datos-orientada-a-grafos/).
 
-- GraphEverywhere E. Bases de datos NoSQL | Bases de datos de Grafos. GraphEverywhere. [link](https://www.grapheverywhere.com/nosql-de-grafos/). Publicat 29 de juny de 2019.
+- GraphEverywhere E. Bases de datos NoSQL Bases de datos de Grafos. GraphEverywhere. [link](https://www.grapheverywhere.com/nosql-de-grafos/). Publicat 29 de juny de 2019.
 
 - GraphEverywhere E. Qué son los grafos. GraphEverywhere. [link](https://www.grapheverywhere.com/que-son-los-grafos/). Publicat: 10 de març de 2020.
 Redes y grafos. Las comunicaciones y la logística – Marzo, mes de las matemáticas. [link](https://marzomates.webs.ull.es/grafos-y-redes-las-comunicaciones-y-la-logistica/).
@@ -31,7 +31,7 @@ Redes y grafos. Las comunicaciones y la logística – Marzo, mes de las matemá
 
 - RDF Graph Data Model. Stardog Documentation. [link](https://docs.stardog.com/tutorials/rdf-graph-data-model).
 
-- Redis. Graph Database | Redis. Redis. [link](https://redis.com/glossary/graph-database/#:~:text=History%20of%20graph%20databases,graphs%20in%20the%20mid-1980s). Publicat el 12 d’abril de 2023.
+- Redis. Graph Database Redis. Redis. [link](https://redis.com/glossary/graph-database/#:~:text=History%20of%20graph%20databases,graphs%20in%20the%20mid-1980s). Publicat el 12 d’abril de 2023.
 
 - History of Databases and Graph Database. Bitnine. [link](https://bitnine.net/blog-graph-database/history-of-databases-and-graph-database/?ckattempt=1)  Publicat el 9 de novembre de 2016.
 
