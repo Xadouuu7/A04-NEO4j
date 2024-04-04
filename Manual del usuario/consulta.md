@@ -107,7 +107,7 @@ RETURN COUNT(player) AS numero_de_jugadores;
 ```
 MATCH (player:PLAYER {name: "LeBron James"})-[puntos:PLAYED_AGAINST]->(team:TEAM)
 RETURN player,SUM(puntos.points)
-
+```
 ```
 - Obtenir la mitjana d'edat dels jugadors (```AVG```):
 ```
